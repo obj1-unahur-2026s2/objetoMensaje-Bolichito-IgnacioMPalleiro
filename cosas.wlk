@@ -50,7 +50,41 @@ object placa{
 
   method esDeMaterialQueBrilla() = self.material().esBrillante()
 }
+object arito{
+    method color() = celeste
+    method material() = cobre
+    method peso() = 180
+    method esDeColorFuerte() = self.color().esFuerte()
+    method esDeMaterialQueBrilla() = self.material().esBrillante()
+ }
 
+
+object banquito{
+    var color = naranja
+    method color() = color
+    method material() = madera
+    method peso() = 1700
+    method esDeColorFuerte() = self.color().esFuerte()
+    method esDeMaterialQueBrilla() = self.material().esBrillante()
+    
+    method cambiarColor(nuevoColor){
+       color = nuevoColor
+       }
+}
+
+object cajita{
+    var unaCosa = arito
+    method color() = rojo
+    method material() = cobre
+    method peso() = 400 + unaCosa.peso()
+    method unaCosa() = unaCosa
+    method camabiarDecosa(cosa){
+        unaCosa = cosa
+    }
+    method esDeColorFuerte() = self.color().esFuerte()
+    method esDeMaterialQueBrilla() = self.material().esBrillante()
+    
+}
 //Colores
 object rojo{
     method esFuerte() = true
@@ -63,6 +97,9 @@ object celeste{
 }
 object pardo{
     method esFuerte() = false
+}
+object naranja {
+  method esFuerte() = false
 }
 
 // Materiales
